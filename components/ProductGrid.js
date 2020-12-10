@@ -1,15 +1,26 @@
 import React from 'react';
-import Product from '../components/Product';
+import ProductCard from '../components/ProductCard';
+import productData from '../products.json';
 
 // TODO: Split grid into product subcomponents
 
-export default function ProductGrid() {
+export default function ProductGrid(props) {
+  console.log(productData.products);
+
   return (
-    <div class="container">
-      <div class="row">
-        <Product />
-        <Product />
-        <Product />
+    <div className="container" style={props.style}>
+      <div className="row">
+        {productData.products.map((product) => {
+          return (
+            <ProductCard
+              key={product.id}
+              name={product.name}
+              imgSrc={product.image}
+              description={product.description}
+              price={product.price}
+            />
+          );
+        })}
       </div>
     </div>
   );

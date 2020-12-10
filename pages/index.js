@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Next Coffee Shop</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="stylesheet"
@@ -33,7 +33,7 @@ export default function Home() {
       </Head>
       <Header />
       <Hero />
-      <ProductGrid />
+      <ProductGrid style={{ padding: '4% 0%' }} />
     </div>
   );
 }

@@ -3,38 +3,45 @@ import React from 'react';
 export default function SlideOut() {
   return (
     <div
-      class="modal fade"
-      id="exampleModal1"
-      tabindex="-1"
+      className="modal fade"
+      id="slideOut"
+      tabIndex="-1"
       role="dialog"
-      aria-labelledby="exampleModalLabel1"
+      aria-labelledby="slideOutLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-dialog-slideout modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">
-              Modal sideout small
+      <div
+        className="modal-dialog modal-dialog-slideout modal-sm"
+        role="document"
+      >
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id="slideOutLabel">
+              Your Cart
             </h5>
             <button
               type="button"
-              class="close"
+              className="close"
               data-dismiss="modal"
               aria-label="Close"
             >
               <span aria-hidden="true">×</span>
             </button>
           </div>
-          <div class="modal-body">...</div>
-          <div class="modal-footer">
+          <div className="modal-body">
+            <p className="empty-cart-msg">
+              There's nothing here! Add something to your cart and come back :)
+            </p>
+          </div>
+          <div className="modal-footer">
             <button
               type="button"
-              class="btn btn-secondary"
+              className="btn btn-secondary"
               data-dismiss="modal"
             >
               Close
             </button>
-            <button type="button" class="btn btn-primary">
+            <button type="button" className="btn btn-primary">
               Save changes
             </button>
           </div>
