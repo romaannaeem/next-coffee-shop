@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import _ from 'lodash';
 import CartContextProvider, { CartContext } from '../context/CartContext';
 
 export default function ProductCard(props) {
@@ -23,7 +24,10 @@ export default function ProductCard(props) {
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
                 onClick={() => {
-                  addToCart(props.object);
+                  addToCart({
+                    ...props.object,
+                    uniqueId: _.uniqueId('unique_'),
+                  });
                   console.log(cart);
                 }}
               >

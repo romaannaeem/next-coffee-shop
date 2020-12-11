@@ -16,8 +16,14 @@ function CartContextProvider(props) {
     setCart((oldArray) => [...oldArray, item]);
   };
 
+  const removeFromCart = (uniqueId) => {
+    const filteredArray = cart.filter((item) => item.uniqueId !== uniqueId);
+
+    setCart(filteredArray);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
       {props.children}
     </CartContext.Provider>
   );

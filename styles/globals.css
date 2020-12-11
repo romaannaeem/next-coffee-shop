@@ -60,3 +60,7 @@
 #slideOut {
   padding-right: 0px !important;
 }
+
+.remove-from-cart {
+  cursor: pointer;
+}

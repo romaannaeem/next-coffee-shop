@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import CartContextProvider, { CartContext } from '../context/CartContext';
 
 export default function SlideOut() {
-  let { cart, addToCart } = useContext(CartContext);
+  const { cart, addToCart, removeFromCart } = useContext(CartContext);
 
   const calculateTotal = () => {
     let total = 0;
@@ -11,7 +11,7 @@ export default function SlideOut() {
       total += cartItem.price;
     });
 
-    return total;
+    return total.toFixed(2);
   };
 
   return (
@@ -29,9 +29,9 @@ export default function SlideOut() {
       >
         <div className="modal-content">
           <div className="modal-header">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-              <span class="text-muted">Your cart</span>
-              <span class="badge badge-secondary badge-pill">
+            <h4 className="d-flex justify-content-between align-items-center mb-3">
+              <span className="text-muted">Your cart</span>
+              <span className="badge badge-secondary badge-pill">
                 {cart.length}
               </span>
             </h4>
@@ -51,21 +51,26 @@ export default function SlideOut() {
                 :)
               </p>
             ) : (
-              <ul class="list-group mb-3">
+              <ul className="list-group mb-3">
                 {cart.map((cartItem) => (
                   <li
-                    class="list-group-item d-flex justify-content-between lh-condensed"
-                    key={cartItem.id}
+                    className="list-group-item d-flex justify-content-between lh-condensed"
+                    key={cartItem.uniqueId}
                   >
                     <div>
-                      <h6 class="my-0">{cartItem.name}</h6>
-                      <small class="text-muted">Brief Description</small>
+                      <h6 className="my-0">{cartItem.name}</h6>
+                      <small className="text-muted">Brief Description</small>
                     </div>
-                    <span class="text-muted">${cartItem.price}</span>
-                    <span class="text-muted">x</span>
+                    <span className="text-muted">${cartItem.price}</span>
+                    <span
+                      className="text-muted remove-from-cart"
+                      onClick={() => removeFromCart(cartItem.uniqueId)}
+                    >
+                      x
+                    </span>
                   </li>
                 ))}
-                <li class="list-group-item d-flex justify-content-between">
+                <li className="list-group-item d-flex justify-content-between">
                   <span>Total</span>
                   <strong>${calculateTotal()}</strong>
                 </li>
