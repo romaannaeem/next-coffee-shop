@@ -36,9 +36,46 @@ export default function checkout() {
           <div className="col-md-4 order-md-2 mb-4">
             <h4 className="d-flex justify-content-between align-items-center mb-3">
               <span className="text-muted">Your cart</span>
-              <span className="badge badge-secondary badge-pill">3</span>
+              <span className="badge badge-secondary badge-pill">
+                {cart.length}
+              </span>
             </h4>
-            <ul className="list-group mb-3">
+
+            {cart.length === 0 ? (
+              <p className="empty-cart-msg" style={{ textAlign: 'left' }}>
+                There's nothing here! Add something to your cart and come back
+                :)
+              </p>
+            ) : (
+              <ul className="list-group mb-3">
+                {cart.map((cartItem) => (
+                  <li
+                    className="list-group-item d-flex justify-content-between lh-condensed"
+                    key={cartItem.uniqueId}
+                  >
+                    <div>
+                      <h6 className="my-0">{cartItem.name}</h6>
+                      <small className="text-muted">
+                        {cartItem.shortDescription}
+                      </small>
+                    </div>
+                    <span className="text-muted">${cartItem.price}</span>
+                    <span
+                      className="text-muted remove-from-cart"
+                      onClick={() => removeFromCart(cartItem.uniqueId)}
+                    >
+                      x
+                    </span>
+                  </li>
+                ))}
+                <li className="list-group-item d-flex justify-content-between">
+                  <span>Total</span>
+                  <strong>${calculateTotal()}</strong>
+                </li>
+              </ul>
+            )}
+
+            {/* <ul className="list-group mb-3">
               <li className="list-group-item d-flex justify-content-between lh-condensed">
                 <div>
                   <h6 className="my-0">Product name</h6>
@@ -71,7 +108,7 @@ export default function checkout() {
                 <span>Total (USD)</span>
                 <strong>$20</strong>
               </li>
-            </ul>
+            </ul> */}
 
             <form className="card p-2">
               <div className="input-group">
@@ -247,7 +284,7 @@ export default function checkout() {
               <hr className="mb-4" /> */}
             <form className="needs-validation" noValidate="">
               <h4 className="mb-3">Payment</h4>
-              REPLACE WITH STRIPE!
+              <h5 style={{ color: 'red' }}>REPLACE WITH STRIPE!</h5>
               <div className="row">
                 <div className="col-md-6 mb-3">
                   <label htmlFor="cc-name">Name on card</label>

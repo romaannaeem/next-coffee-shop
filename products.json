@@ -5,6 +5,7 @@
       "name": "Coffee Grind",
       "image": "https://via.placeholder.com/500x350",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra nibh id leo lacinia aliquet. Proin et mauris mattis, malesuada quam et, pharetra enim. Morbi vitae ultricies urna",
+      "shortDescription": "Lorem ipsum dolor sit amet",
       "price": 9.99
     },
     {
@@ -12,6 +13,7 @@
       "name": "Coffee Mug",
       "image": "https://via.placeholder.com/500x350",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra nibh id leo lacinia aliquet. Proin et mauris mattis, malesuada quam et, pharetra enim. Morbi vitae ultricies urna",
+      "shortDescription": "Lorem ipsum dolor sit amet",
       "price": 12.99
     },
     {
@@ -19,6 +21,7 @@
       "name": "Kettle",
       "image": "https://via.placeholder.com/500x350",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pharetra nibh id leo lacinia aliquet. Proin et mauris mattis, malesuada quam et, pharetra enim. Morbi vitae ultricies urna",
+      "shortDescription": "Lorem ipsum dolor sit amet",
       "price": 19.99
     }
   ]

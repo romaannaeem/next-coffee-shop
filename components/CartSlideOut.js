@@ -60,7 +60,9 @@ export default function SlideOut() {
                   >
                     <div>
                       <h6 className="my-0">{cartItem.name}</h6>
-                      <small className="text-muted">Brief Description</small>
+                      <small className="text-muted">
+                        {cartItem.shortDescription}
+                      </small>
                     </div>
                     <span className="text-muted">${cartItem.price}</span>
                     <span
