@@ -5,8 +5,6 @@ import productData from '../products.json';
 // TODO: Split grid into product subcomponents
 
 export default function ProductGrid(props) {
-  console.log(productData.products);
-
   return (
     <div className="container" style={props.style}>
       <div className="row">
@@ -18,6 +16,7 @@ export default function ProductGrid(props) {
               imgSrc={product.image}
               description={product.description}
               price={product.price}
+              object={product}
             />
           );
         })}

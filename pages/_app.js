@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import '../styles/globals.css';
-import CartContext from '../context/CartContext';
+import CartContextProvider from '../context/CartContext';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -30,9 +30,9 @@ function MyApp({ Component, pageProps }) {
           crossOrigin="anonymous"
         ></script>
       </Head>
-      <CartContext.Provider value={[]}>
+      <CartContextProvider>
         <Component {...pageProps} />
-      </CartContext.Provider>
+      </CartContextProvider>
     </div>
   );
 }

@@ -1,11 +1,9 @@
-import React from 'react';
-
-// ProductCard props
-// imgSrc
-// description
-// price
+import React, { useContext } from 'react';
+import CartContextProvider, { CartContext } from '../context/CartContext';
 
 export default function ProductCard(props) {
+  const { cart, addToCart } = useContext(CartContext);
+
   return (
     <div className="col-md-4">
       <div className="card mb-4 shadow-sm">
@@ -24,6 +22,10 @@ export default function ProductCard(props) {
               <button
                 type="button"
                 className="btn btn-sm btn-outline-secondary"
+                onClick={() => {
+                  addToCart(props.object);
+                  console.log(cart);
+                }}
               >
                 Add to Cart
               </button>

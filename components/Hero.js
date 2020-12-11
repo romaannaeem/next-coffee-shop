@@ -1,5 +1,5 @@
 import React from 'react';
-import SlideOut from '../components/SlideOut';
+import CartSlideOut from './CartSlideOut';
 
 export default function Hero() {
   return (
@@ -16,7 +16,7 @@ export default function Hero() {
           <button className="btn btn-primary">See all products</button>
         </div>
       </div>
-      <SlideOut />
+      <CartSlideOut />
     </>
   );
 }
