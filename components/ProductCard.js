@@ -27,7 +27,7 @@ export default function ProductCard(props) {
                 type="button"
                 className="btn btn-success"
                 onClick={() => {
-                  addToCartNotify();
+                  addToCartNotify(); // Green bar or rainbow? 🤔
                   addToCart({
                     ...props.object,
                     uniqueId: _.uniqueId('unique_'),

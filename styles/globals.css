@@ -64,3 +64,11 @@
 .remove-from-cart {
   cursor: pointer;
 }
+
+.Toastify__toast-body {
+  color: black;
+}
+
+/* .Toastify__progress-bar--default {
+  background: #4cd964 !important; 
+} */
