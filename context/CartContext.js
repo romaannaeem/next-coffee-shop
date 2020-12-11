@@ -5,10 +5,15 @@ export const CartContext = createContext();
 function CartContextProvider(props) {
   const [cart, setCart] = useState([]);
 
+  // const addToCart = (item) => {
+  //   let tempCart = cart;
+  //   tempCart.push(item);
+  //   setCart(tempCart);
+  // };
+
   const addToCart = (item) => {
-    let tempCart = cart;
-    tempCart.push(item);
-    setCart(tempCart);
+    console.log(item);
+    setCart((oldArray) => [...oldArray, item]);
   };
 
   return (

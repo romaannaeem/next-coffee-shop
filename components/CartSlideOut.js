@@ -1,10 +1,8 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import CartContextProvider, { CartContext } from '../context/CartContext';
 
 export default function SlideOut() {
-  const cart = useContext(CartContext);
-
-  console.log('cart', cart);
+  let { cart, addToCart } = useContext(CartContext);
 
   return (
     <div
@@ -34,9 +32,18 @@ export default function SlideOut() {
             </button>
           </div>
           <div className="modal-body">
-            <p className="empty-cart-msg">
-              There's nothing here! Add something to your cart and come back :)
-            </p>
+            {cart.length === 0 ? (
+              <p className="empty-cart-msg">
+                There's nothing here! Add something to your cart and come back
+                :)
+              </p>
+            ) : (
+              <ul>
+                {cart.map((cartItem) => (
+                  <li key={cartItem.id}>{cartItem.name}</li>
+                ))}
+              </ul>
+            )}
           </div>
           <div className="modal-footer">
             <button
