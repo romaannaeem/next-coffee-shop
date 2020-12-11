@@ -11,7 +11,7 @@ export default function ProductCard(props) {
       <div className="card mb-4 shadow-sm">
         <img src={`${props.imgSrc}`} />
         <div className="card-body">
-          <h5 class="card-title">{props.name}</h5>
+          <h5 className="card-title">{props.name}</h5>
           <p className="card-text">{props.description}</p>
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">

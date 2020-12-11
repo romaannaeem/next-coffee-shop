@@ -1,4 +1,5 @@
 import React from 'react';
+import CartContext from '../context/CartContext';
 
 export default function SlideOut() {
   return (
