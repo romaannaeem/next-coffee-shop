@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "jquery": "^3.5.1",
     "lodash": "^4.17.20",
     "next": "10.0.3",
     "react": "17.0.1",

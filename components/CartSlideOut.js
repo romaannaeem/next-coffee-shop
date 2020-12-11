@@ -1,5 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import CartContextProvider, { CartContext } from '../context/CartContext';
+import Link from 'next/link';
 
 export default function SlideOut() {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
@@ -85,9 +86,11 @@ export default function SlideOut() {
             >
               Close
             </button>
-            <button type="button" className="btn btn-primary">
-              Check Out
-            </button>
+            <Link href="/checkout">
+              <button type="button" className="btn btn-primary">
+                Check Out
+              </button>
+            </Link>
           </div>
         </div>
       </div>

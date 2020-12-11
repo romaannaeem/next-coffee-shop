@@ -5,7 +5,7 @@ import ProductGrid from '../components/ProductGrid';
 export default function Home() {
   return (
     <div>
-      <Header />
+      <Header home />
       <Hero />
       <ProductGrid style={{ padding: '4% 0%' }} />
     </div>
