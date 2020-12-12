@@ -94,9 +94,10 @@ export default function checkout() {
                 </div>
               </div>
             </form>
-          </div>
-          <div className="col-md-8 order-md-1">
-            <h4 className="mb-3">Payment</h4>
+
+            <h4 className="mb-3" style={{ paddingTop: '12%' }}>
+              Payment
+            </h4>
             <StripeCheckout
               stripeKey={STRIPE_PUBLIC_TEST_KEY}
               token={handleToken}
@@ -104,8 +105,13 @@ export default function checkout() {
               shippingAddress
               amount={calculateTotal() * 100}
               name="Your item(s)"
-            />
+            >
+              <button className="btn btn-primary btn-lg btn-block">
+                Check out with Stripe
+              </button>
+            </StripeCheckout>
           </div>
+          <div className="col-md-8 order-md-2"></div>
         </div>
       </div>
     </>

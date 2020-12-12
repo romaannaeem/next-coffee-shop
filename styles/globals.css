@@ -69,6 +69,15 @@
   color: black;
 }
 
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url('/images/coffee-beans.jpg');
+  background-size: contain;
+  color: white;
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+
 /* .Toastify__progress-bar--default {
   background: #4cd964 !important; 
 } */
