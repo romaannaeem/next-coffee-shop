@@ -7,6 +7,7 @@ dependencies:
   next: 10.0.3_react-dom@17.0.1+react@17.0.1
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-stripe-checkout: 2.6.3
   react-toastify: 6.2.0_react-dom@17.0.1+react@17.0.1
 lockfileVersion: 5.2
 packages:
@@ -3092,6 +3093,10 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
+  /react-stripe-checkout/2.6.3:
+    dev: false
+    resolution:
+      integrity: sha1-MXOocLBOWjwyGgbSTNU8YDARHEU=
   /react-toastify/6.2.0_react-dom@17.0.1+react@17.0.1:
     dependencies:
       clsx: 1.1.1
@@ -4152,4 +4157,5 @@ specifiers:
   next: 10.0.3
   react: 17.0.1
   react-dom: 17.0.1
+  react-stripe-checkout: ^2.6.3
   react-toastify: ^6.2.0

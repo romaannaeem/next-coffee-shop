@@ -1,6 +1,8 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/Link';
 import CartContextProvider, { CartContext } from '../context/CartContext';
-import Link from 'next/link';
 
 export default function SlideOut() {
   const { cart, addToCart, removeFromCart } = useContext(CartContext);
@@ -67,9 +69,10 @@ export default function SlideOut() {
                     <span className="text-muted">${cartItem.price}</span>
                     <span
                       className="text-muted remove-from-cart"
+                      style={{ color: 'red' }}
                       onClick={() => removeFromCart(cartItem.uniqueId)}
                     >
-                      x
+                      {` x `}
                     </span>
                   </li>
                 ))}

@@ -34,7 +34,7 @@ export default function ProductCard(props) {
                   });
                 }}
               >
-                Add to Cart
+                <FontAwesomeIcon icon={faCartPlus} size="xs" /> Add to Cart
               </button>
             </div>
             <small className="text-muted">${props.price}</small>

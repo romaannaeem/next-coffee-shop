@@ -1,5 +1,4 @@
 import { ToastContainer } from 'react-toastify';
-
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import ProductGrid from '../components/ProductGrid';
