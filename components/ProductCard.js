@@ -9,7 +9,10 @@ import CartContextProvider, { CartContext } from '../context/CartContext';
 export default function ProductCard(props) {
   const { cart, addToCart } = useContext(CartContext);
 
-  const addToCartNotify = () => toast(`${props.name} added to cart!`);
+  const addToCartNotify = () =>
+    toast(`${props.name} added to cart!`, {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
 
   return (
     <div className="col-md-4">
@@ -38,7 +41,7 @@ export default function ProductCard(props) {
                 Cart
               </button>
             </div>
-            <small className="text-muted">${props.price}</small>
+            <span className="text-muted card-pricing">${props.price}</span>
           </div>
         </div>
       </div>

@@ -66,7 +66,9 @@ export default function SlideOut() {
                         {cartItem.shortDescription}
                       </small>
                     </div>
-                    <span className="text-muted">${cartItem.price}</span>
+                    <span className="text-muted" style={{ padding: '0% 2%' }}>
+                      ${cartItem.price}
+                    </span>
                     <span
                       className="text-muted remove-from-cart"
                       style={{ color: 'red' }}
