@@ -8,12 +8,9 @@ export default function Hero() {
         <div className="col-md-5 p-lg-5 mx-auto my-5">
           <h1 className="display-4 font-weight-normal">Next Coffee Shop</h1>
           <p className="lead font-weight-normal">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            vitae luctus velit. Etiam in ante eleifend, pulvinar nibh eget,
-            sollicitudin ex. Quisque semper justo augue, ac fringilla odio
-            sodales nec.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
-          <button className="btn btn-primary">See all products</button>
+          <button className="btn btn-success">See all products</button>
         </div>
       </div>
       <CartSlideOut />
